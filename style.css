@@ -1,0 +1,167 @@
+body{
+    display:flex;
+    margin:0px;
+    line-height: 1.6;
+}
+
+#navbar{
+    width: 25%;
+    height:100%;
+    border-right:1px solid;
+    position:fixed;
+    background-color: #001f3f;
+
+}
+#main-doc{
+    width:74em;
+    margin-left:30%;
+    padding:20px;
+    /* background-color: #708090; */
+}
+
+#navbar header{
+    padding-top: 10px;
+    font-size: 2em;
+    margin:10px;
+    padding-left: 1.2em;
+    color: white;
+    /* text-align: center; */
+}
+#navbar ul{
+    display: block;
+    margin:0px;
+    padding: 0px;
+}
+#navbar li{
+    list-style: none;
+    border-bottom: 1px solid white;
+    padding: 1em 3em;
+}
+#navbar a{
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em;
+    color: white;
+}
+
+hr{
+    height:2px;
+    background-color: white;
+    border:none;
+    margin-bottom: 0px;
+}
+
+#navbar li:hover{
+    background-color: #0c345d;
+}
+
+ section header {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #0c345d;
+    padding-bottom: 5px;
+
+
+}
+
+article header{
+    font-size: 1.5em;
+    border-bottom: none;
+    margin-bottom: -15px;
+    /* border-bottom: 2px solid #afb8c1; */
+}
+p {
+    color: #040404;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+p ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+p li {
+    margin-bottom: 10px;
+}
+
+code {
+    background-color: #f0f0f0;
+    padding: 5px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    display: inline-block;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main-section {
+    margin-bottom: 40px;
+}
+
+article {
+    margin-top: 20px;
+}
+
+#Common_Git_Commands_Cheat_Sheet ul {
+    list-style-type: square;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
+
+    #navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #main-doc {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    #navbar li {
+        padding: 0.8em 1.5em;
+        font-size: 1em;
+    }
+
+    #navbar header {
+        font-size: 1.5em;
+        padding-left: 1em;
+    }
+
+    section header {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        padding-bottom: 4px;
+    }
+
+    article header {
+        font-size: 1.2em;
+        margin-bottom: -10px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    code {
+        font-size: 0.9em;
+    }
+}

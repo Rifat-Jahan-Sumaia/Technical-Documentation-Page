@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Git and Github</header><hr>
+        <ul>
+            <li>
+                <a href="#Introduction_to_Git_and_Github" class="nav-link">Introduction to Git and Github</a>
+            </li>
+            <li>
+                <a href="#Setting_up_Git" class="nav-link">Setting up Git</a>
+            </li>
+            <li>
+                <a href="#Basic_Git_Workflow" class="nav-link">Basic Git Workflow</a>
+            </li>
+            <li>
+                <a href="#Branching_and_Merging" class="nav-link">Branching and Merging</a>
+            </li>
+            <li>
+                <a href="#Working_with_Remote_Repositories" class="nav-link">Working with Remote Repositories</a>
+            </li>
+            <li>
+                <a href="#Cloning_Repositories" class="nav-link">Cloning Repositories</a>
+            </li>
+            <li>
+                <a href="#Collaborating_on_GitHub" class="nav-link">Collaborating on GitHub</a>
+            </li>
+            <li>
+                <a href="#Resolving_Merge_Conflicts" class="nav-link">Resolving Merge Conflicts</a>
+            </li>
+            <li>
+                <a href="#Common_Git_Commands_Cheat_Sheet" class="nav-link">Common Git Commands Cheat Sheet</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_Git_and_Github">
+            <header>Introduction to Git and Github</header>
+            <article>
+                <header>What is Git?</header>
+                <p>
+Git is a distributed version control system designed to track changes in source code during software development.
+ It helps teams collaborate by allowing multiple developers to work on the same project simultaneously, without overwriting each other's changes.
+ Git also keeps a history of all changes, enabling developers to revert to previous versions of their code if necessary.
+                </p>
+                <header>What is GitHub?</header>
+                <p>
+                    GitHub is a cloud-based hosting service for Git repositories. 
+                    It provides a web-based graphical interface along with features
+                     like issue tracking, pull requests, and wikis. GitHub is widely used
+                      for project collaboration, allowing developers to contribute to open-source
+                       projects, manage repositories, and share their work with others.
+            </p>
+            </article>
+        </section>
+        <section class="main-section" id="Setting_up_Git">
+            <header>Setting up Git</header>
+            <article>
+                <header>Installing Git</header>
+                <p>
+                    To install Git on your computer, follow these steps:
+                    <ul>
+                        <li>Windows: Download Git from <a href="https://git-scm.com">git-scm.com</a> and follow the installation instructions.</li>
+                        <li>Mac: Use Homebrew to install Git by running the following command in the terminal:
+                            <code>
+                                brew install git
+                            </code>
+                        </li>
+                        <li>
+                            Linux: Install Git using the package manager for your distribution:
+                            <code>
+                                sudo apt-get install git  # Ubuntu/Debian
+                                sudo yum install git      # Fedora
+                            </code>
+                        </li>
+                    </ul>
+                </p>
+            </article>
+            <header>Configuring Git</header>
+            <article>
+                <p>
+                    After installing Git, you need to configure it with 
+                    your user information, which will be associated with your commits.
+                </p>
+                <p>Set your username:</p>
+                <code>git config --global user.name "Your Name"</code>
+                <p>Set your email:</p>
+                <code>git config --global user.email "your.email@example.com"</code>
+            </article>
+        </section>
+        <section class="main-section" id="Basic_Git_Workflow">
+            <header>Basic Git Workflow</header>
+            <article>
+                <header>Initializing a Git Repository</header>
+                <p>To start tracking changes in a project, navigate to the project's
+                    directory and run the following command to initialize a Git repository:</p>
+                 <code>git init</code>
+                 <p>This creates a .git directory, where Git stores all the version control information.</p>
+                 <header>Adding Files to Git</header>
+                 <p>To stage files for commit (i.e., to prepare them to be saved to the repository), use:</p>
+                 <code>git add file.txt</code>
+                 <p>To add all files in the current directory, use:</p>
+                 <code>git add .</code>
+                 <header>Commiting Changes</header>
+                 <p>Once files are staged, commit them to the repository with:</p>
+                 <code>git commit -m "Your commit message"</code>
+                 <p>The -m flag allows you to write a short message describing the changes.
+                </article></p>
+        </section>
+            <section class="main-section" id="Branching_and_Merging">
+                <header>Branching and Merging</header>
+                <article>
+                    <header>Creating a Branch</header>
+                    <p>
+                        Branching in Git allows you to work on different versions of a project simultaneously. To create a new branch, use the command:
+                    </p>
+                    <code>git branch new-feature</code>
+                    <p>This creates a new branch called <em>new-feature</em>. You can then switch to this branch using:</p>
+                    <code>git checkout new-feature</code>
+        
+                    <header>Merging Branches</header>
+                    <p>Once you've made changes in a branch, you can merge them back into the main branch (typically <em>master</em> or <em>main</em>) with:</p>
+                    <code>git checkout main</code><br>
+                    <code>git merge new-feature</code>
+                    <p>This merges the <em>new-feature</em> branch into the <em>main</em> branch.</p>
+                </article>
+            </section>
+        
+            <section class="main-section" id="Working_with_Remote_Repositories">
+                <header>Working with Remote Repositories</header>
+                <article>
+                    <header>Adding a Remote Repository</header>
+                    <p>
+                        A remote repository allows you to collaborate with others by sharing your code online. To add a remote repository, use:
+                    </p>
+                    <code>git remote add origin https://github.com/username/repository.git</code>
+                    <p>Now you can push your changes to this remote repository.</p>
+        
+                    <header>Pushing Changes to Remote</header>
+                    <p>To push your commits to the remote repository, use:</p>
+                    <code>git push origin main</code>
+                    <p>This will push the changes from your local <em>main</em> branch to the <em>origin</em> remote repository.</p>
+                </article>
+            </section>
+        
+            <section class="main-section" id="Cloning_Repositories">
+                <header>Cloning Repositories</header>
+                <article>
+                    <p>To work on an existing GitHub repository, you can clone it to your local machine. Use the following command:</p>
+                    <code>git clone https://github.com/username/repository.git</code>
+                    <p>This will download a copy of the repository to your computer, allowing you to make changes locally.</p>
+                </article>
+            </section>
+        
+            <section class="main-section" id="Collaborating_on_GitHub">
+                <header>Collaborating on GitHub</header>
+                <article>
+                    <header>Forking a Repository</header>
+                    <p>To contribute to an open-source project, you typically fork the repository to create your own copy. You can do this directly from the GitHub interface by clicking the "Fork" button.</p>
+        
+                    <header>Making a Pull Request</header>
+                    <p>After forking and making changes to your own copy, you can create a pull request to propose these changes to the original project. On GitHub, go to the original repository and click "New pull request".</p>
+                </article>
+            </section>
+        
+            <section class="main-section" id="Resolving_Merge_Conflicts">
+                <header>Resolving Merge Conflicts</header>
+                <article>
+                    <p>Sometimes, Git will encounter conflicts when merging branches. This happens when the same part of a file is modified in two different branches. Git will mark the conflict in the file, and you'll need to edit the file manually to resolve the conflict.</p>
+                    <p>After resolving the conflict, mark it as resolved by adding the file again:</p>
+                    <code>git add conflicted-file.txt</code>
+                    <p>Then commit the changes:</p>
+                    <code>git commit -m "Resolved merge conflict"</code>
+                </article>
+            </section>
+        <section class="main-section" id="Common_Git_Commands_Cheat_Sheet">
+            <header>Common Git Commands Cheat Sheet</header>
+            <article>
+                <p>Here are some of the most commonly used Git commands:</p>
+                <ul>
+                    <li>
+                        Check the status of your files:
+                        <code>git status</code>
+                    </li>
+                    <li>
+                        View the commit history:
+                    <code>
+                        git log
+                    </code>
+                </li>
+                <li>See changes made to files:
+                    <code>git diff</code>
+                </li>
+                <li>Temporarily save changes without committing:
+                    <code>git stash</code>
+                </li>
+                <li>
+                    Undo the last commit (while keeping changes):
+                    <code>git reset --soft HEAD~1</code>
+                </li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+</body>
+</html>
